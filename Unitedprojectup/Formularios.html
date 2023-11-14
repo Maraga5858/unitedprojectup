@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html> 
+<link rel="stylesheet" href="index.css">
+<meta charset="UTF-8">
+<body>
+    <header>
+        <div id="header_izquierda"> <h1>Eventos</h1></div>
+        <div id="header_derecha">
+            <a class="header_boton" href="index.html">Eventos</a>
+            <a class="header_boton" style="background-color: rgb(255,255,255, 0.1); backdrop-filter: blur(4px);">Formulario</a>
+            <a class="header_boton" href="Información.html">Información</a>
+            
+        </div>
+    </header>
+    <div id="contenido" style="display: flex;">
+        <form name="formulario" method="get" action="insert.php"return validarFormulario()>
+
+            <input type="hidden" id="clientes" name= "db" value="Unidedprojectup">
+            <input type="hidden" id="clientes2" name="table" value="clientes">
+
+            <label for="name">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required />
+
+            <label for="mail">Correo electrónico:</label>
+            <input type="email" id="correo" name="correo" value="" required />
+            
+            <label for="password">Contraseña:</label>
+            <input type="password" id="contrasena" name="contrasena" required />
+
+            <label for="telf">Teléfono:</label>
+            <input type="text" id="telefono" name="telefono" required/>
+
+            <label for="edad">Edad:</label>
+            <input type="date" id="edad" name="edad" required/>
+
+            <label for="evento1">Selecciona un Evento</label>
+            <select id="evento1" name="evento1">
+                <option value="Worlds2024" >Lol Worlds 2024</option>
+                <option value="Valorant Champions2024" >Valorant Champions 2024 </option>
+                <option value="Clash Royale Wordl Tour2024" >Clash Royale Wordtour 2024</option>
+                <option value="Mundial de Pokemon 2024" >Mundial de Pokemon 2024</option>
+                <option value="Wordl Champioship2024" >Rocket league Wordl Champioship2024</option>
+                <option value="Pubg Campeonato Mundial2024" >Pubg Campeonato Mundial2024</option>
+            </select>
+
+            <label for="evento2">¿Quieres apuntarte a otro evento?</label>
+            <select id="evento2" name="evento2">
+                <option value="">No</option>
+                <option value="Worlds2024" >Lol Worlds 2024</option>
+                <option value="Valorant Champions2024" >Valorant Champions 2024 </option>
+                <option value="Clash Royale Wordl Tour2024" >Clash Royale Wordtour 2024</option>
+                <option value="Mundial de Pokemon 2024" >Mundial de Pokemon 2024</option>
+                <option value="Wordl Champioship2024" >Rocket league Wordl Champioship2024</option>
+                <option value="Pubg Campeonato Mundial2024" >Pubg Campeonato Mundial2024</option>
+            </select>
+
+            <div class="terms-checkbox-container">
+                <input class="acceptterms" type="checkbox" name="condiciones" value="agree_terms">Acepto los Términos y Condiciones
+            </div>
+            <br>
+            <br>
+            
+            <input class="btn-submit" type="submit" id="enviar" value="Inscribir"/>
+        </form>
+
+    </div>
+
+
+    <script>
+        function validarFormulario() {
+
+            var y = document.forms["formulario"]["condiciones"].checked;
+            console.log(y);
+            if (y == false) {
+                alert("Tienes que aceptar los términos y condiciones");
+                return false;
+            }
+
+            var contraseña = document.forms["formulario"]["contraseña"].value;
+            if (contraseña.length < 8) {
+                alert("La contraseña es débil. Debe tener al menos 8 caracteres.");
+                return false;
+            }         
+            
+
+            var evento1 = document.forms["formulario"]["evento1"].value;
+            var evento2 = document.forms["formulario"]["evento2"].value;
+            if (evento1 == evento2) {
+                alert("No puedes elegir el misnmo evento dos veces");
+                return false;
+            } 
+
+        }
+
+    </script>
+</body>
+</html>

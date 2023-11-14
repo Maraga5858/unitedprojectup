@@ -1,0 +1,169 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial;
+}
+
+body {
+  margin-top: 60px;
+}
+
+header {
+  padding-left: 20px;
+  margin-top: -60px;
+  height: 60px;
+  color: white;
+  background: url(https://i.makeagif.com/media/1-12-2021/izAv5U.gif);
+  width: 100%;
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#header_izquierda {
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#header_derecha {
+  padding-right: 25px;
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: right;
+}
+
+#contenido {
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+background-color: rgb(233, 233, 233);
+padding: 30px 0px;
+ text-align: center;
+ background-image: url(https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8fA%3D%3D);
+ background-size: cover;
+ background-repeat: no-repeat;
+ background-attachment: fixed;
+}
+
+#contenido form {
+  color: rgb(2, 2, 2);
+  display: flex;
+  flex-direction: column;
+  padding: 50px 200px;
+  background-color: #dfd6d6;
+  border-radius: 10px;
+}
+
+label {
+  margin-top: 10px;
+}
+
+input {
+  border-radius: 5px;
+  height: 30px;
+  border: none;
+}
+
+textarea {
+  border-radius: 5px;
+  height: 50px;
+  border: none;
+}
+
+#boton {
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+#contenido_cv {
+  font-size: 17px;
+  margin-top: 20px;
+  border: solid white 3px;
+  border-radius: 20px;
+  padding: 3px;
+  border-collapse: separate; /* Asegura que el cellspacing tenga efecto */
+  border-spacing: 0;
+  color: aliceblue;
+}
+
+#contenido_cv th, td {
+  border: 1px solid white;
+  padding: 10px;
+}
+
+#contenido_cv tr td {
+  height: 150px;
+}
+
+#contenido_cv tr th {
+  background-color: white;
+  padding-bottom: 20px;
+  padding: 0px 10px 10px 10px;
+  height: 20px;
+  border-radius: 20px 20px 0px 0px ;
+}
+
+/* TABLA INDEX */
+
+#contenido_juego {
+  font-size: 17px;
+  margin-top: 20px;
+  border: solid white 3px;
+  border-radius: 20px;
+  padding: 3px;
+  border-collapse: separate; /* Asegura que el cellspacing tenga efecto */
+  border-spacing: 0;
+  color: aliceblue;
+}
+
+#contenido_juego tr th {
+  background-color: white;
+  padding: 10px 0px;
+  height: 20px;
+  border-radius: 20px 20px 0px 0px ;
+}
+
+/* FIN TABLA INDEX */
+
+table img {
+  width: 100%;
+  height: 150px;
+  border-radius: 20px;
+}
+
+.info{
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+}
+
+.header_boton {
+  background-color: rgb(0,0,0, 0.5);
+  backdrop-filter: blur(10px);
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  margin-right: 20px;
+}
+
+.header_boton:hover {
+  background-color: rgb(255,255,255, 0.1);
+  backdrop-filter: blur(4px);
+}
+
+#contenido_texto {
+  background-color: rgb(233, 233, 233);
+  padding: 20px;
+  border: solid #8499E3;
+  border-width: 0px 0px 15px 0px;
+}
